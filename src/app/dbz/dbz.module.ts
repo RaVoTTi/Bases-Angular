@@ -3,18 +3,27 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { MainPageComponent } from './main-page/main-page.component';
+import { PersonajesComponent } from './personajes/personajes.component';
+import { AgregarComponent } from './agregar/agregar.component';
+import { DBZService } from './services/dbz.service';
 
 
 @NgModule({
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    PersonajesComponent,
+    AgregarComponent
   ],
   imports: [
     CommonModule,
     FormsModule
   ],
   exports:[
-    MainPageComponent
+    MainPageComponent, 
+
+  ],
+  providers:[
+    DBZService
   ]
 })
 export class DBZModule { }

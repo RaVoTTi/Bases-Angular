@@ -4,34 +4,10 @@
 
 <div class="row">
   <div class="col">
-    <h3>Personajes</h3>
-    <hr />
-    <ul>
-      <li *ngFor="let pers of personajes"> {{pers.name }} - {{ pers.power | number}}</li>
-    </ul>
+    <app-personajes ></app-personajes>
   </div>
-  <div class="col">
-    <h3>Add</h3>
-    <hr />
-    <form (ngSubmit)="addDBZ()">
-      <input
-        type="text"
-        placeholder="Nombre"
-        [(ngModel)]="new.name"
-        name="nombre"
-      />
 
-      <input
-        type="text"
-        placeholder="Power"
-        [(ngModel)]="new.power"
-        name="Nombre"
-      />
-      <button type="submit">Add</button>
-    </form>
-  </div>
   <div class="col">
-    <h3>Add</h3>
-    <hr />
+    <app-agregar [new]="new"></app-agregar>
   </div>
 </div>
